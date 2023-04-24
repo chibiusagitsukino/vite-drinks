@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.Hero {
+  @include flex-container(column, center, center);
+
+  hr {
+    border: 0;
+    width: 80%;
+    border-bottom: 1px dashed $primary-color;
+    border-width: 4px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: $primary-color-alpha;
+  }
+
+  .firstList {
+    list-style-type: none;
+    padding: 0;
+    gap: 40px;
+    @include flex-container;
+
+    li {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  .secondList {
+    list-style-type: none;
+    padding: 0;
+    gap: 40px;
+    display: flex;
+
+    .categoryItem:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+
+    .categoryItem {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+    
+
+    li {
+      padding: 4px 8px;
+      border: 1px solid #7e7e7e;
+      color: $primary-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Hero {
+    h1 {
+      font-size: 2rem;
+    }
+    .firstList {
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+    }
+    .secondList {
+      flex-wrap: wrap;
+      justify-content: center;
+      .categoryItem {
+        margin-bottom: 10px;
+        width: 33.33%; 
+      }
+    }
+  }
+}

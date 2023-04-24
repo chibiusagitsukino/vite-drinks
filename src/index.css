@@ -1,0 +1,13 @@
+/* @import './styles/variables';
+
+::selection {
+    color: $secondary-color;
+    background: $active-color;
+}
+
+
+body {
+  margin: 0;
+  background-color: $secondary-color;
+  color: $primary-color;
+} */

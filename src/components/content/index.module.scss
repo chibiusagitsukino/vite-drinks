@@ -1,0 +1,27 @@
+@import '../../styles/mixins';
+
+.Content {
+  margin-top: 20px;
+  @include flex-container(row, center, flex-start, 50px, wrap);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+
+ @media only screen and (max-width: 767px) {
+  .Content {
+    margin-top: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

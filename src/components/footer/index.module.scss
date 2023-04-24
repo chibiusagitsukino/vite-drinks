@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.Footer {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color;
+  height: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Footer {
+    margin-bottom: 10px;
+    height: 80px;
+  }
+}

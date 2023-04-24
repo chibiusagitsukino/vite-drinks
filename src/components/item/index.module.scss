@@ -1,0 +1,240 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.Item {
+  @include flex-container;
+  height: 430px;
+  width: 700px;
+  position: fixed;
+  background-color: $secondary-color;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  top: 230px;
+  left: calc(50% - 350px);
+  display: flex;
+
+  button {
+    border: 0;
+    background: transparent;
+    color: $primary-color;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+  }
+
+  .text {
+    @include flex-container(column, center, center, 10px);
+    text-align: center;
+    padding: 8px 12px;
+    flex-grow: 1;
+    list-style: circle;
+    max-width: 52%;
+    max-height: 100%;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p{
+      font-size: 0.8rem;
+    }
+    
+    
+
+    .carousel {
+      transform: translateY(-1000%);
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .textList {
+      width: 100%;
+      
+      @include flex-container(row, space-around);
+      
+      ul {
+        list-style-type: none;
+        padding: 30px;
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        li { 
+
+          p {
+            font-size: 0.8rem;
+          }
+
+        }
+      }
+    }
+  }
+
+  .rightButton {
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    left: 710px;
+  }
+
+  .leftButton {
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    right: 710px;
+  }
+
+  .image {
+    width: 48%;
+    height: 430px;
+    object-fit: none;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 430px;
+      object-fit: none;
+    }
+
+    .close {
+      position: absolute;
+      left: 287px;
+      border: 1px solid #fff;
+      color:#fff;
+    }
+  }
+}
+
+@media screen and (max-width: 835px) {
+
+  ul{
+    padding: 0;
+
+  }
+
+img{
+  height: inherit !important;
+}
+
+  .item {
+    height: 550px;
+    width: 600px;
+    .image {
+      object-fit: none;
+      width: 300x;
+    }
+    .carousel button {
+      width: 86px;
+      border-radius: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  ul{
+    padding: 0;
+
+  }
+
+  .item {
+    width: 80%;
+    flex-direction: column;
+
+    .image {
+      display: none;
+    }
+  }
+} 
+
+@media screen and (max-width: 835px) {
+
+  .Item {
+    margin-top: 50px;
+    border: 1px solid;
+    height: 500px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  img {
+    height: inherit !important;
+  }
+ 
+  .leftButton {
+    position: absolute;
+    z-index: 1;
+    margin: 5px 0;
+    top: 510px !important;
+    right: 230px !important;
+  }
+
+  .rightButton {
+    position: absolute;
+    z-index: 1;
+    margin: 5px 0;
+    top: 510px !important;
+    left: 275px !important;
+  }
+
+  .image {
+    width: 48%;
+    height: inherit !important;
+    object-fit: cover;
+    position: relative;
+
+    .close {
+      top: 0px !important;
+      left: 110px !important;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+
+  .text {
+    max-width: 100%;
+    margin: 10px 0;
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    .textList {
+      flex-direction: column;
+
+      ul {
+        margin: 5px 0;
+        padding: 0 !important;
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        li {
+          margin-left: 10px;
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

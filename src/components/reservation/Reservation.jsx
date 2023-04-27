@@ -28,7 +28,7 @@ const Reservation = ({ setReservation, setTimeReservation, setViewPopup }) => {
     setReservation(false)
     setTimeout(() => {
       setViewPopup(false)
-    }, 5000)
+    }, 4000)
   }
 
   return (

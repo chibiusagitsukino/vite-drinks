@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GET } from './utils/http'
 import { filteredList } from './utils/funcs'
-
+import Alphabet from './components/alphabet'
 import Navbar from './components/navbar'
 import Hero from './components/hero'
 import Content from './components/content'
@@ -11,6 +11,9 @@ import styles from './App.module.scss'
 import Reservation from './components/reservation'
 
 function App() {
+
+  const [selectedLetter, setSelectedLetter] = useState('a')
+
   const [drinkList, setDrinkList] = useState([])
 
   const [category, setCategory] = useState('Drink')
@@ -31,10 +34,30 @@ function App() {
   })
 
   useEffect(() => {
-    GET('/search.php?f=c').then(({ drinks }) => {
+    GET('/search.php?f=' + selectedLetter).then(({ drinks }) => {
       setDrinkList(() => drinks)
     })
-  }, [])
+  }, [selectedLetter])
+
+
+  /*
+
+   useEffect(() => {
+    if (selectLetterValue !== "") {
+      setLoader(true);
+      GET("/search.php?f=" + selectLetterValue).then((data) => {
+        setLoader(false);
+        if (data.error) {
+          setError(data.error);
+        } else {
+          setError(null);
+          setCocktailList(() => (data.drinks ? data.drinks : []));
+        }
+      });
+    }
+  }, [selectLetterValue]);
+  
+  */
 
   return (
     <div className={styles.App}>
@@ -57,6 +80,7 @@ function App() {
             />
           )}
           <Hero setCategory={setCategory} />
+          <Alphabet selectedLetter={selectedLetter} setSelectedLetter={setSelectedLetter}/>
           <Content
             data={filteredList(drinkList, 'strCategory', category)}
             setDrinkClick={setDrinkClick} 

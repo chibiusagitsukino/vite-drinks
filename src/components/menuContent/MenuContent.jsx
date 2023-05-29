@@ -1,6 +1,7 @@
 import styles from './index.module.scss'
 
-const MenuContent = () => {
+const MenuContent = ({setReservation }) => {
+  const onHandleClick = () => setReservation(true)
   return (
     <div className={styles.MenuContent}>
       <ul className={styles.hamburgerUl}>
@@ -11,7 +12,7 @@ const MenuContent = () => {
           <p>About</p>
         </li>
         <li>
-          <p>Contacts</p>
+          <p onClick={onHandleClick}>Booking</p>
         </li>
       </ul>
     </div>

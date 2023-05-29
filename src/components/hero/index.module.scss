@@ -67,18 +67,15 @@
 @media only screen and (max-width: 767px) {
  
     .Hero {
-
-      img  {
-        display: none;
-        }
         
-      .mojito{
-          display: none;   
-      }
+      
 
     h1 {
       font-size: 2rem;
     }
+
+    
+
     .firstList {
       flex-wrap: wrap;
       justify-content: center;

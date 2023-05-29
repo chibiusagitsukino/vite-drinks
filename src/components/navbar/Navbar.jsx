@@ -13,7 +13,7 @@ const Navbar = ({ setReservation }) => {
 
   return (
     <div className={styles.Navbar}>
-      <HamburgerMenu showMenu={showMenu} hamburgerTrigger={hamburgerTrigger}/>
+      <HamburgerMenu showMenu={showMenu} hamburgerTrigger={hamburgerTrigger} setReservation={setReservation}/>
       <img
         src='https://img.icons8.com/external-tal-revivo-filled-tal-revivo/256/external-mobile-application-hamburger-menu-setting-interface-basic-filled-tal-revivo.png'
         alt='hamburger'

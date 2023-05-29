@@ -83,6 +83,10 @@ const Image = styled.img `
   margin-right: 1200px;
   margin-top: -360px;
 
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+
 `
 
 ;

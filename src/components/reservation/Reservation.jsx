@@ -39,7 +39,7 @@ const Reservation = ({ setReservation, setTimeReservation, setViewPopup }) => {
           closeComponent && styles.contentFadeOut
         }`}
       >
-        <h1>Book your drink</h1>
+        <h1>Book a Table</h1>
         <form className={styles.form} onSubmit={onHandleSubmit}>
           <label htmlFor='text'>Insert</label>
           <input
@@ -70,7 +70,7 @@ const Reservation = ({ setReservation, setTimeReservation, setViewPopup }) => {
             required
           />
 
-          <input type='submit' value='Book a drink' />
+          <input type='submit' value='Submit' />
         </form>
       </div>
     </div>

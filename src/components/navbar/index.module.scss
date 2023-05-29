@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 .Navbar {
-  padding: 1px 12px;
+  padding: 12px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,23 +14,33 @@
     display: none;
 
     li {
+      
       color: $primary-color;
       font-weight: bold;
       cursor: pointer;
+      &:hover {
+        color: #bd4910;
+      }
+
+      img {
+        height: 80px;
+        
+      }
     }
+  
   }
 
-  img {
-    height: 180px;
-  }
+  
 
   button {
     border: 0;
     height: 30px;
     cursor: pointer;
+    background-color: #cc5a24;
+    border-radius: 15px;
 
     &:hover {
-      background-color: $active-color;
+      background-color: #6f7c2d;
       color: $secondary-color;
     }
   }
@@ -49,6 +59,7 @@
       gap: 20px;
       list-style-type: none;
       padding: 0;
+      margin-left: -190px;
     }
   }
 }
@@ -66,7 +77,7 @@
     }
 
     img {
-      height: 100px;
+      height: 80px;
     }
   }
 }

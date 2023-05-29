@@ -1,5 +1,15 @@
-export const filteredList = (list, key, value) =>
-  list.filter((item) => item[key] === value)
+export const filteredList = (list, key, value) => {
+  if (!list) {
+    return [];
+  }
+  return list.filter((item) => item[key] === value);
+}
+
+
+
+
+// const filteredList = (list, key, value) =>
+//   list.filter((item) => item[key] === value)
 
 export const valuesExtractor = (obj, key) => {
   const objEntries = Object.entries(obj)

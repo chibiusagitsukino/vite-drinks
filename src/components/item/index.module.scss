@@ -1,6 +1,26 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
+
+.heroItem {
+margin-top: 80px;
+  background-color: #c4d0ba;
+  height: 560px;
+  border-radius: 15px;
+
+  .heroTitle{
+
+    font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+  color: #cb8a64;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  
+  }
+
+
+
+
 .Item {
   @include flex-container;
   height: 430px;
@@ -11,17 +31,16 @@
   top: 230px;
   left: calc(50% - 350px);
   display: flex;
+  border-radius: 15px;
 
   button {
-    border: 0;
     background: transparent;
-    color: $primary-color;
+    color: #fff;
     font-size: 24px;
     cursor: pointer;
 
     &:hover {
-      background-color: $primary-color;
-      color: $secondary-color;
+      color: #76975e;
     }
   }
 
@@ -82,6 +101,11 @@
     z-index: 1;
     top: 200px;
     left: 710px;
+    color: #d66229;
+    cursor: pointer;
+    &:hover {
+      color: #76975e;
+    }
   }
 
   .leftButton {
@@ -89,6 +113,11 @@
     z-index: 1;
     top: 200px;
     right: 710px;
+    color: #d66229;
+    cursor: pointer;
+    &:hover {
+      color: #76975e;
+    }
   }
 
   .image {
@@ -96,20 +125,24 @@
     height: 430px;
     object-fit: none;
     position: relative;
+    
 
     img {
       width: 100%;
       height: 430px;
       object-fit: none;
+      border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
     }
 
     .close {
       position: absolute;
       left: 287px;
-      border: 1px solid #fff;
+      border: none;
       color:#fff;
     }
   }
+}
 }
 
 @media screen and (max-width: 835px) {
@@ -119,9 +152,9 @@
 
   }
 
-img{
-  height: inherit !important;
-}
+// img{
+//   height: inherit !important;
+// }
 
   .item {
     height: 550px;
@@ -156,43 +189,56 @@ img{
 
 @media screen and (max-width: 835px) {
 
+  .heroItem {
+    width: 100%;
+      background-color: #c4d0ba;
+      height: 700px;
+      border-radius: 15px;
+
+      .heroTitle{
+
+        padding-top: 25px;
+      
+      }
+
   .Item {
-    margin-top: 50px;
-    border: 1px solid;
+    
+    // margin-top: 50px;
+    // border: 1px solid;
     height: 500px;
     width: 100%;
     max-width: 600px;
     position: relative;
     top: 0;
     left: 0;
-    box-shadow: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
     align-items: center;
     justify-content: space-between;
   }
 
-  img {
-    height: inherit !important;
-  }
+  // img {
+  //   height: inherit !important;
+  // }
  
   .leftButton {
     position: absolute;
     z-index: 1;
     margin: 5px 0;
-    top: 510px !important;
-    right: 230px !important;
+    top: 250px !important;
+    right: 340px !important;
   }
 
   .rightButton {
     position: absolute;
     z-index: 1;
     margin: 5px 0;
-    top: 510px !important;
-    left: 275px !important;
+    top: 250px !important;
+    left: 340px !important;
   }
 
   .image {
     width: 48%;
-    height: inherit !important;
+    // height: inherit !important;
     object-fit: cover;
     position: relative;
 
@@ -237,4 +283,5 @@ img{
       }
     }
   }
+}
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GET } from './utils/http'
 import { filteredList } from './utils/funcs'
-import Alphabet from './components/alphabet'
+// import Alphabet from './components/alphabet'
 import Navbar from './components/navbar'
 import Hero from './components/hero'
 import Content from './components/content'
@@ -79,12 +79,13 @@ function App() {
               setViewPopup={setViewPopup}
             />
           )}
-          <Hero setCategory={setCategory} />
-          <Alphabet selectedLetter={selectedLetter} setSelectedLetter={setSelectedLetter}/>
+          <Hero setCategory={setCategory} selectedLetter={selectedLetter} setSelectedLetter={setSelectedLetter} >
+          {/* <Alphabet selectedLetter={selectedLetter} setSelectedLetter={setSelectedLetter}/> */}
           <Content
             data={filteredList(drinkList, 'strCategory', category)}
             setDrinkClick={setDrinkClick} 
           />{' '}
+          </Hero>
         </>
       )}
       {viewPopup && (

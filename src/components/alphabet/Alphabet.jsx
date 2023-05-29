@@ -38,7 +38,7 @@ const Alphabet = ({ selectedLetter, setSelectedLetter }) => {
     
       return (
         <div className={styles.Alphabet}>
-          <label htmlFor="alphabet-select" className={styles.AlphabetLabel}>Select a letter:</label>
+          <label htmlFor="alphabet-select" className={styles.AlphabetLabel}>Sort by letter:</label>
           <select id="alphabet-select" className={styles.AlphabetSelect} value={selectedLetter} onChange={handleChange}>
             <option value=""> </option>
             {alphabet.map((letter, index) => (

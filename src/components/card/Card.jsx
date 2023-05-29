@@ -1,5 +1,5 @@
 import styles from './index.module.scss'
-import { valuesExtractor } from '../../utils/funcs'
+import { filteredList, valuesExtractor } from '../../utils/funcs'
 
 const Card = ({ data, setDrinkClick }) => {
   const onHandleClick = () =>
@@ -15,6 +15,7 @@ const Card = ({ data, setDrinkClick }) => {
   }
 
   return (
+    
     <div className={styles.Card} onClick={onHandleClick}>
       <img src={data.strDrinkThumb} alt={data.strDrink} />
       <div className={styles.text}>
@@ -26,7 +27,21 @@ const Card = ({ data, setDrinkClick }) => {
         </ul>
       </div>
     </div>
+    
   )
 }
 
 export default Card
+
+
+
+//         {filteredList().length ? (
+//           <ul>
+//             {ingredientsData().map((ingredient) => (
+//               <li key={ingredient}>{ingredient}</li>
+//             ))}
+//           </ul>
+//         ) : (
+//           <p className={styles.noDrink}>No drink found</p>
+//         )}
+//      

@@ -1,27 +1,51 @@
 @import '../../styles/mixins';
 
 .Content {
-  margin-top: 20px;
-  @include flex-container(row, center, flex-start, 50px, wrap);
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+  gap: 20px;
+  flex-direction: column;
   flex-wrap: wrap;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  max-height: calc(85vh - 180px);
+  scrollbar-width: thin;
+  scrollbar-color: #cd8c64 transparent;
+  top: 160px; 
+  right: 80px;
+  position: absolute;  
+  
 }
 
-.wrapper{
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+.Content::-webkit-scrollbar {
+  width: 10px; 
 }
+
+.Content::-webkit-scrollbar-thumb {
+  background-color: #cd8c64; 
+  border-radius: 15px; 
+}
+// .contentContainer {
+//   overflow-y: scroll;
+  
+// }
+
+
+// .wrapper{
+//   display: flex;
+//   justify-content: center;
+//   gap: 100px;
+//   flex-wrap: wrap;
+// }
 
 
  @media only screen and (max-width: 767px) {
   .Content {
     margin-top: 10px;
+    position: static;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 100%;
   }
 }

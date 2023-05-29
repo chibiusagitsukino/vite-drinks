@@ -17,6 +17,13 @@
     color: $primary-color-alpha;
   }
 
+  .mojito  {
+    height: 500px;
+    margin-right: 1100px;
+    margin-top: -180px;
+   
+  }
+
   .firstList {
     list-style-type: none;
     padding: 0;
@@ -45,18 +52,30 @@
       background-color: $primary-color;
       color: $secondary-color;
     }
+  
+    // li {
+    //   padding: 4px 8px;
+    //   border: 1px solid #7e7e7e;
+    //   color: $primary-color;
+    // }
     
-
-    li {
-      padding: 4px 8px;
-      border: 1px solid #7e7e7e;
-      color: $primary-color;
-    }
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .Hero {
+
+
+@media only screen and (max-width: 767px) {
+ 
+    .Hero {
+
+      img  {
+        display: none;
+        }
+        
+      .mojito{
+          display: none;   
+      }
+
     h1 {
       font-size: 2rem;
     }
@@ -71,9 +90,13 @@
     .secondList {
       flex-wrap: wrap;
       justify-content: center;
+      
+      
       .categoryItem {
+        
         margin-bottom: 10px;
         width: 33.33%; 
+
       }
     }
   }

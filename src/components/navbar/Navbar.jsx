@@ -23,13 +23,14 @@ const Navbar = ({ setReservation }) => {
       <ul className={styles.menu}>
         <li>Home</li>
         <li>About</li>
-        <li>Contacts</li>
-      </ul>
-      <img
-        src='https://png.pngtree.com/png-vector/20190306/ourlarge/pngtree-continuous-line-drawing-of-cheers-clinking-of-friends-with-bourbon-whisky-png-image_763676.jpg'
+        <li onClick={onHandleClick}>Booking</li>
+        <li><img
+        src='../../../public/1.png'
         alt='logo'
-      />
-      <button onClick={onHandleClick}>booking</button>
+      /></li>
+      </ul>
+      
+      
     </div>
   )
 }

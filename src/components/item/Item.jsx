@@ -1,5 +1,6 @@
 import styles from './index.module.scss'
 import { valuesExtractor } from '../../utils/funcs'
+import {BsCaretRightFill, BsCaretLeftFill} from 'react-icons/bs'
 
 const Item = ({ data, setDrinkClick,  filteredList }) => {
   const onHandleClick = () =>
@@ -27,17 +28,20 @@ const Item = ({ data, setDrinkClick,  filteredList }) => {
     }))
 
   return (
+    <div className={styles.heroItem}>
+      <h1 className={styles.heroTitle}>Mojito's Revival</h1>
     <div className={styles.Item}> 
       <div className={styles.leftButton}>
-        <button className={styles.prev} onClick={onHandleLeftButtonClick} disabled={data.positionList === 0}>
-          &larr; previous
-        </button>
+        <BsCaretLeftFill className={styles.prev} onClick={onHandleLeftButtonClick} style={{ display: data.positionList === 0 ? "none" : "inline-block" }} />
+        {/* <button className={styles.prev} onClick={onHandleLeftButtonClick} disabled={data.positionList === 0}>
+        &lt;
+        </button> */}
       </div>
       <div className={styles.text}> 
         <div className={styles.carousel}></div>
         <h1>{data.payload.strDrink}</h1>
-        <p>{data.payload.strCategory}</p>
-        <p>{data.payload.strGlass}</p>
+        {/* <p>{data.payload.strCategory}</p>
+        <p>{data.payload.strGlass}</p> */}
         <div className={styles.textList}>
           <ul>
             <h3>Ingredients:</h3>
@@ -59,10 +63,15 @@ const Item = ({ data, setDrinkClick,  filteredList }) => {
         <img src={data.payload.strDrinkThumb} alt={data.payload.idDrink} />
       </div>
       <div className={styles.rightButton}>
-        <button className={styles.next} onClick={onHandleRightButtonClick} disabled={data.positionList === filteredList.length - 1}>
-          next &rarr;
-        </button>
+        <BsCaretRightFill className={styles.next} onClick={onHandleRightButtonClick} style={{
+    display:
+      data.positionList === filteredList.length - 1 ? "none" : "inline-block",
+  }} />
+        {/* <button className={styles.next} onClick={onHandleRightButtonClick} disabled={data.positionList === filteredList.length - 1}>
+        &gt;
+        </button> */}
       </div>
+    </div>
     </div>
   )
 }

@@ -20,8 +20,8 @@
   }
 
   .text {
-    height: 180px; 
-  overflow: hidden;
+    height: 180px;
+    overflow: hidden;
     border-radius: 15px;
     position: absolute;
     bottom: 0;
@@ -31,6 +31,23 @@
     transform: translateY(90px);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cd8c64 transparent;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #d0b520;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    
+    
     
 
     .noDrink {

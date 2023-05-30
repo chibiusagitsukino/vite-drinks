@@ -35,12 +35,13 @@
   button {
     border: 0;
     height: 30px;
+    width: 30px;
     cursor: pointer;
-    background-color: #cc5a24;
+    background-color: #cc59244b;
     border-radius: 15px;
 
     &:hover {
-      background-color: #6f7c2d;
+      background-color: #6f7c2d57;
       color: $secondary-color;
     }
   }

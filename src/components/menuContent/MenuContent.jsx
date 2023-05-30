@@ -1,7 +1,6 @@
 import styles from './index.module.scss'
 
-const MenuContent = ({setReservation }) => {
-  const onHandleClick = () => setReservation(true)
+const MenuContent = ({ handleBookingClick }) => {
   return (
     <div className={styles.MenuContent}>
       <ul className={styles.hamburgerUl}>
@@ -12,7 +11,7 @@ const MenuContent = ({setReservation }) => {
           <p>About</p>
         </li>
         <li>
-          <p onClick={onHandleClick}>Booking</p>
+          <p onClick={handleBookingClick}>Booking</p>
         </li>
       </ul>
     </div>
@@ -20,3 +19,4 @@ const MenuContent = ({setReservation }) => {
 }
 
 export default MenuContent
+

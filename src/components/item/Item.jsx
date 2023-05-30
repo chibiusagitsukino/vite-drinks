@@ -52,7 +52,7 @@ const Item = ({ data, setDrinkClick,  filteredList }) => {
           </ul>
           <ul>
             <h3>Recipe:</h3>
-            <li><p>{data.payload.strInstructions}</p></li>
+            <li><p className={styles.recipeText}>{data.payload.strInstructions}</p></li>
           </ul>
         </div>
       </div>

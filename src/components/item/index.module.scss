@@ -5,7 +5,7 @@
 .heroItem {
 margin-top: 80px;
   background-color: #c4d0ba;
-  height: 560px;
+  height: 520px;
   border-radius: 15px;
 
   .heroTitle{
@@ -76,10 +76,20 @@ margin-top: 80px;
       width: 100%;
       
       @include flex-container(row, space-around);
+
+      .fadeText {
+        max-height: 150px;
+  overflow: auto;
+  
+  
+
+      }
       
       ul {
         list-style-type: none;
         padding: 30px;
+        // max-height: 400px;
+    // overflow-y: auto;
 
         h3 {
           font-size: 1rem;
@@ -192,7 +202,7 @@ margin-top: 80px;
   .heroItem {
     width: 100%;
       background-color: #c4d0ba;
-      height: 700px;
+      height: 620px;
       border-radius: 15px;
 
       .heroTitle{
@@ -205,7 +215,7 @@ margin-top: 80px;
     
     // margin-top: 50px;
     // border: 1px solid;
-    height: 500px;
+    height: 428px;
     width: 100%;
     max-width: 600px;
     position: relative;

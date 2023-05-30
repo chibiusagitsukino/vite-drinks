@@ -21,7 +21,7 @@ const Title = styled.h1`
   text-align: center;
   font-size: 3rem;
   color: #cb8a64;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  text-shadow: rgb(255 255 255 / 50%) 0px 0px 4px;
 `
 
 const ListWrapper = styled.ul`

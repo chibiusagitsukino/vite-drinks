@@ -10,6 +10,12 @@
   list-style-type: none;
   gap: 10px;
   padding: 10px;
+
+  
+}
+.hamburgerUl p:hover {
+  cursor: pointer;
+  color:rgb(196 208 186);
 }
 
 @media screen and (min-width: 800px) {

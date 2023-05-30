@@ -30,6 +30,8 @@
     padding: 12px;
     transform: translateY(90px);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    overflow-y: auto;
+    
 
     .noDrink {
       color: red;
@@ -45,9 +47,17 @@
     }
   }
 
+  // .overflow-scroll {
+  //   overflow-y: auto;
+  //   max-height: 150px; 
+  // }
+
   &:hover{
     transform: scale(1.1 ,1.1);
   }
+
+ 
+  
 }
 
 
@@ -77,8 +87,9 @@
      
     }
     h2{
-      margin-top: 6px;
-      margin-bottom: 10px;
+      margin-top: 30px;
+      margin-bottom: 0px;
+      
     }
     ul{
       padding-left: 0px !important;

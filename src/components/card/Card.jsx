@@ -18,7 +18,7 @@ const Card = ({ data, setDrinkClick }) => {
     
     <div className={styles.Card} onClick={onHandleClick}>
       <img src={data.strDrinkThumb} alt={data.strDrink} />
-      <div className={styles.text}>
+      <div className={`${styles.text} ${styles.overflowScroll}`}>
         <h2>{data.strDrink}</h2>
         <ul>
           {ingredientsData().map((ingredient) => (
